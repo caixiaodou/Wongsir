@@ -1,0 +1,28 @@
+{include file="header.phtml"}
+{include file="header.phtml"}
+<form action="" method="post">
+  <div>
+    用户名
+    <input type="text" name="username" value="{$user.username}">
+  </div>
+  <div>
+    密码
+    <input type="text" name="password">
+  </div>
+  <div>
+    昵称
+    <input type="text" name="nickname" value="{$user.nickname}">
+  </div>
+  <div>
+    性别
+    <input type="text" name="sex" value="{$user.sex}">
+  </div>
+  <div>
+    年龄
+    <input type="text" name="age" value="{$user.age}">
+  </div>
+  <div>
+    <button type="submit">保存</button>
+  </div>
+</form>
+{include file="footer.phtml"}
