@@ -1,0 +1,25 @@
+<?php
+require_once("head.php");
+require_once("db.php");
+
+$info = new Member(NULL);
+$info->float_Identification_Number = $_POST["IdentifyNumber"];
+$info->String_Account = $_POST["Account"];
+$info->String_Name = $_POST["Name"];
+// echo  $info->String_Name;
+$info->String_Sex = $_POST["Sex"];
+$info->String_Native = $_POST["Native"];
+$info->Date_Birth = $_POST["Birth"]; 
+ // echo $info->Date_Birth;
+$info->String_Address = $_POST["Address"];
+$info->float_Constact = $_POST["Contact"];
+$info->String_Email = $_POST["Email"];
+ // echo $info->String_Email ;
+$info->String_Password = $_POST["Password"];
+$info->int_ApplicationMark = '1';
+$info->int_StateInformation = '1';
+$member = new MemberOperation(NULL);
+$feedback = $member->Join($info);
+echo $feedback;
+header("refresh: 5; url=Memberoperation.html");
+?>
